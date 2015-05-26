@@ -1,0 +1,411 @@
+html,body {
+	margin: 0;
+	padding: 0;
+	background: #eee url("../img/geometry.png");
+	font-family: Arial;
+	overflow: hidden;
+}
+
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: #135571;
+	padding: 10px;
+	z-index: 9999;
+
+	-webkit-box-shadow: 0 2px 6px -4px #000;
+	box-shadow: 0 2px 6px -4px #000;
+}
+
+header,header nav{
+	line-height: 40px;
+	height: 40px;
+}
+
+header nav a {
+	line-height: 60px;
+	height: 60px;
+}
+
+header nav {
+	float: right;
+	position: absolute;
+	width: auto;
+	top: 0;
+	right: 0;
+	display: block;
+	overflow: hidden;
+	height: 60px;
+}
+
+header nav.open {
+	height: auto;
+	overflow: visible;
+	background: #0A4158;
+}
+
+#menu-toggle {
+	font-size: 1.3em;
+	text-indent: 0;
+	text-decoration: none;
+	color: #fff;
+	text-align: center;
+}
+
+header ul,header li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+header a {
+	display: block;
+	width: 40px;
+	padding: 0 8px;
+	overflow: hidden;
+	text-indent: 999px;
+	white-space: nowrap;
+	background: transparent none no-repeat center;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+	filter: alpha(opacity=50);
+	opacity: 0.5;
+}
+
+header h1,header li {
+	margin: 0;
+}
+
+a.phone {
+	background-image: url("../img/phone-small.gif");
+}
+
+a.phone-landscape {
+	background-image: url("../img/phone-landscape-small.gif");
+}
+
+a.tablet {
+	background-image: url("../img/tablet-small.gif");
+}
+
+a.tablet-landscape {
+	background-image: url("../img/tablet-landscape-small.gif");
+}
+
+a.desktop-medium {
+	background-image: url("../img/laptop-small.gif");
+}
+
+a.desktop-large {
+	background-image: url("../img/desktop-small.gif");
+}
+
+header h1 a {
+	background-image: url("../img/logo.png");
+    background-size: 46px 30px;
+	opacity: 1;
+}
+
+header a:hover {
+	background-color: #195974;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+	filter: alpha(opacity=90);
+	opacity: 0.9;
+}
+
+header a:active,
+header a.active {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+	filter: alpha(opacity=100);
+	opacity: 1;
+}
+
+header a:active {
+	background-color: #1E5C77;
+}
+
+@media only screen and (min-width: 450px) {
+	#menu-toggle {
+		display: none;
+	}
+
+	header nav, header nav.open {
+		position: static;
+		background: none;
+		display: block;
+		padding: 0;
+	}
+	
+	header nav,
+	header nav a {
+		line-height: 40px;
+		height: 40px;
+	}
+
+
+	header h1,
+	header li {
+		float: left;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	header a {
+		width: 60px;
+		padding: 0 10px;
+	}
+
+
+	header,
+	header nav,
+	header nav a {
+		line-height: 60px;
+		height: 60px;
+	}
+
+
+	header h1 a {
+        background-size: 68px 46px;
+	}
+
+	/*a.phone {
+		background-image: url("../img/phone.gif");
+	}
+
+	a.phone-landscape {
+		background-image: url("../img/phone-landscape.gif");
+	}
+
+	a.tablet {
+		background-image: url("../img/tablet.gif");
+	}
+
+	a.tablet-landscape {
+		background-image: url("../img/tablet-landscape.gif");
+	}
+
+	a.desktop-medium {
+		background-image: url("../img/laptop.gif");
+	}
+
+	a.desktop-large {
+		background-image: url("../img/desktop.gif");
+	}*/
+}
+
+/* Previewer CSS */
+.previewer {
+	padding-top: 40px;
+	display: none;
+	line-height: 0;
+	border: 20px solid #333;
+	border-radius: 6px;
+	position: absolute;
+	top: 110px;
+	left: 50%;
+	border-top-width: 60px;
+	border-bottom-width: 80px;
+
+	-webkit-transition: width 300ms linear, margin-left 300ms linear, height 300ms linear, -webkit-transform 200ms linear;
+	-moz-transition: width 300ms linear, margin-left 300ms linear, height 300ms linear, -moz-transform 200ms linear;
+	-o-transition: width 300ms linear, margin-left 300ms linear, height 300ms linear, -o-transform 200ms linear;
+	-ms-transition: width 300ms linear, margin-left 300ms linear, height 300ms linear, -ms-transform 200ms linear;
+	transition: width 300ms linear, margin-left 300ms linear, height 300ms linear, transform 200ms linear;
+
+	-webkit-transform-origin: top center;
+	-moz-transform-origin: top center;
+	-o-transform-origin: top center;
+	-ms-transform-origin: top center;
+	transform-origin: top center;
+}
+
+.previewer-browser {
+	position: absolute;
+	padding: 5px 5px 5px 40px;
+	height: 29px;
+	top: 0;
+	background: #EEE;
+	border-bottom: 1px solid #CCC;
+	left: 0;
+	right: 0;
+}
+
+.previewer-browser input {
+	width: 100%;
+	display: block;
+	border: 0;
+	height: 30px;
+	padding: 8px;
+	font-size: 15px;
+}
+
+.previewer-browser a {
+	width: 30px;
+	position: absolute;
+	top: 5px;
+	left: 5px;
+	height: 30px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-indent: 999px;
+	background: transparent url("../img/refresh.png") no-repeat center;
+}
+
+.previewer-browser input,.previewer-browser a:hover,.previewer-browser a:active {
+	background-color: #FFF;
+	border-radius: 3px;
+	border: 1px solid #BBB;
+
+	-webkit-box-shadow: 0 1px #FFF;
+	box-shadow: 0 1px #FFF;
+
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.previewer-browser a:active {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+	filter: alpha(opacity=70);
+	opacity: 0.7;
+	background-color: #bbb;
+
+	-webkit-box-shadow: inset 0 1px 1px -1px #222;
+	box-shadow: inset 0 1px 1px -1px #222;
+	border: 1px solid #888;
+}
+
+.device-camera,.iphone-button,.previewer:before,.previewer:after,.previewer[data-device=desktop-medium] .previewer-extra:after,.previewer[data-device=desktop-medium] .previewer-extra,.previewer[data-device=desktop-large] .previewer-extra:after,.previewer[data-device=desktop-large] .previewer-extra {
+	content: "";
+	display: block;
+	position: absolute;
+
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	-ms-transition: none;
+	transition: none;
+}
+
+.device-camera,.previewer:before {
+	width: 12px;
+	height: 12px;
+	top: -36px;
+	left: 50%;
+	margin-left: -6px;
+	background: #444;
+	border-radius: 12px;
+}
+
+.iphone-button,.previewer:after {
+	width: 50px;
+	height: 50px;
+	bottom: -65px;
+	left: 50%;
+	margin-left: -25px;
+	background: #2a2a2a;
+	border-radius: 50px;
+}
+
+.previewer[data-device=desktop-medium] .previewer-extra {
+	width: 1780px;
+	height: 60px;
+	margin: 20px 0 0 -250px;
+	background: #CCC;
+	border-radius: 2px 2px 90px 90px;
+}
+
+.previewer[data-device=desktop-medium] .previewer-extra:after {
+	width: 200px;
+	height: 20px;
+	margin: 0 0 0 -100px;
+	background: #BBB;
+	border-radius: 0 0 30px 30px;
+	left: 50%;
+}
+
+.previewer[data-device=desktop-large] .previewer-extra {
+	width: 140px;
+	height: 70px;
+	margin: 70px 0 0 -70px;
+	background: #333;
+	left: 50%;
+}
+
+.previewer[data-device=desktop-large] .previewer-extra:after {
+	width: 350px;
+	height: 30px;
+	margin: 60px 0 0 -175px;
+	background: #333;
+	left: 50%;
+}
+
+.previewer[data-device=phone] {
+	width: 320px;
+	height: 480px;
+	margin-left: -180px;
+}
+
+.previewer[data-device=tablet] {
+	width: 768px;
+	height: 1024px;
+	margin-left: -404px;
+}
+
+.previewer[data-device=tablet-landscape],.previewer[data-device=phone-landscape] {
+	border-width: 20px 80px 20px 60px;
+}
+
+.device-camera-landscape,.previewer[data-device=tablet-landscape]:before,.previewer[data-device=phone-landscape]:before {
+	top: 50%;
+	left: -36px;
+	margin: -6px 0 0 0;
+}
+
+.iphone-button-landscape,.previewer[data-device=tablet-landscape]:after,.previewer[data-device=phone-landscape]:after {
+	top: 50%;
+	left: auto;
+	right: -65px;
+	margin: -25px 0 0 0;
+}
+
+.previewer[data-device=phone-landscape] {
+	width: 480px;
+	height: 320px;
+	margin-left: -310px;
+}
+
+.previewer[data-device=tablet-landscape] {
+	width: 1024px;
+	height: 768px;
+	margin-left: -582px;
+}
+
+.previewer[data-device=desktop-small]:after,.previewer[data-device=desktop-medium]:after,.previewer[data-device=desktop-large]:after {
+	display: none;
+}
+
+.previewer[data-device=desktop-small] {
+	width: 1024px;
+	height: 768px;
+}
+
+.previewer[data-device=desktop-medium] {
+	width: 1280px;
+	height: 824px;
+	margin-left: -660px;
+}
+
+.previewer[data-device=desktop-large] {
+	width: 1920px;
+	height: 1080px;
+	margin-left: -980px;
+}
+
+iframe {
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
