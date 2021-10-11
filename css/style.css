@@ -194,6 +194,10 @@ header a:active {
 	}*/
 }
 
+iframe {
+  background: #fff;
+}
+
 /* Previewer CSS */
 .previewer {
 	padding-top: 40px;
