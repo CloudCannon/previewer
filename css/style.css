@@ -102,7 +102,7 @@ a.desktop-large {
 }
 
 header h1 a {
-	background-image: url("../img/logo.png");
+	background-image: url("../img/logo.svg");
     background-size: 46px 30px;
 	opacity: 1;
 }
