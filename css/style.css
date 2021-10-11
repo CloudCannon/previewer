@@ -103,8 +103,8 @@ a.desktop-large {
 
 header h1 a {
 	background-image: url("../img/logo.svg");
-  background-size: 140px 46px;
-  width: 160px;
+  background-size: 70px 46px;
+  width: 80px;
 	opacity: 1;
 }
 
@@ -167,8 +167,8 @@ header a:active {
 
 
 	header h1 a {
-    background-size: 70px 46px;
-    width: 80px;
+    background-size: 140px 46px;
+    width: 160px;
 	}
 
 	/*a.phone {
